@@ -1,0 +1,50 @@
+#ring-1{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+}
+.ring {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.ring:before,
+.ring:after,
+.ring span {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 1px #dbe5ff;
+    animation: glow-grow 8s ease-out infinite;
+}
+
+.ring:after {
+    animation-delay: 1.66s;
+}
+
+.ring span{
+    animation-delay: 2.33s;
+}
+
+@keyframes glow-grow {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        transform: scale(10);
+        opacity: 0;
+    }
+}
