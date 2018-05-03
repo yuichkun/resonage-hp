@@ -16,7 +16,7 @@
 }
 @keyframes slideLeft{
     from{
-        left: -120px;
+        left: -100vw;
     }
     to{
         left: 0;
@@ -24,7 +24,7 @@
 }
 @keyframes slideRight{
     from{
-        right: -120px;
+        right: -100vw;
     }
     to{
         right: 0;
@@ -44,5 +44,21 @@
     }
     to {
         opacity: 0.7;
+    }
+}
+@keyframes logoSlideLeft{
+    from{
+        left: -100px;
+    }
+    to{
+        left: 0;
+    }
+}
+@keyframes logoSlideRight{
+    from{
+        right: -100px;
+    }
+    to{
+        right: 0;
     }
 }
