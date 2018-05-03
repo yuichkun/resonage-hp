@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#main {
+    background: black;
+    color: darkgray;
+    padding: 30px;
+    font-size: 30px;
+}
+#jumbotron {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+/* ///////////////////////////////////// */
+.hidden {
+    display: none;
+}
