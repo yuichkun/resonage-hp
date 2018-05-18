@@ -97,20 +97,21 @@ body {
 .left-clip {
     clip-path: polygon(0 0, 100% 0, 45% 100%, 0 100%);
     transform-origin: top left;
+    filter: grayscale(40%);
 }
 
 #left .first {
-    background: url('orchestra.png');
+    background: url('JAGMO.png');
     background-size: cover;
-    background-position: 60%;
     transform: translateY(-100%);
     animation: slideTop 0.4s ease-out forwards;
     animation-delay: 1s;
 }
 
 #left .second {
-    background: url('JAGMO.png');
+    background: url('orchestra.png');
     background-size: cover;
+    background-position: 60%;
     transform: translateX(-100%);
     animation: slideLeft 0.4s ease-out forwards;
     animation-delay: 1.8s;
