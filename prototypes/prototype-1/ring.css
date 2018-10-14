@@ -23,7 +23,7 @@
     left: 0%;
     border-radius: 50%;
     opacity: 0;
-    box-shadow: 0 0 1px #dbe5ff;
+    box-shadow:0 0 1px #aba6ff;
     animation: glow-grow 8s ease-out infinite;
 }
 

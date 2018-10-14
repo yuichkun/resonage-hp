@@ -10,9 +10,9 @@
   "author": "Yuichi Yogo",
   "license": "ISC",
   "dependencies": {
-    "three": "^0.92.0"
+    "d3": "^5.7.0"
   },
   "devDependencies": {
-    "node-sass": "^4.9.0"
+    "node-sass": "^4.9.3"
   }
 }
