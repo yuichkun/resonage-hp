@@ -8,11 +8,11 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "gatsby": "^1.9.250",
-    "gatsby-link": "^1.6.40",
-    "gatsby-plugin-netlify-cms": "^2.0.1",
-    "gatsby-source-filesystem": "^1.5.38",
-    "gatsby-transformer-remark": "^1.7.42",
-    "netlify-cms": "^1.8.4"
+    "gatsby": "^2.0.31",
+    "gatsby-link": "^2.0.5",
+    "gatsby-plugin-netlify-cms": "^3.0.4",
+    "gatsby-source-filesystem": "^2.0.5",
+    "gatsby-transformer-remark": "^2.1.9",
+    "netlify-cms": "^2.1.3"
   }
 }
