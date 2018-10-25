@@ -36,7 +36,6 @@ function findCurrentNewsDetail(newsPosts) {
     newsPosts[year].forEach(post => {
       const { frontmatter: { date }, html } = post;
       if (date === targetDate) {
-        // foundItem = html; 
         foundItem = post;
       }
     });
@@ -46,7 +45,9 @@ function findCurrentNewsDetail(newsPosts) {
 
 export const query = graphql`
 {
-  allMarkdownRemark {
+  allMarkdownRemark(
+    sort: {fields: [frontmatter___date], order: DESC}
+  ) {
     edges {
       node {
         html

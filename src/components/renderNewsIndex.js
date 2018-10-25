@@ -1,31 +1,48 @@
 import React from "react";
 import { Link } from "gatsby";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemTitle,
+  AccordionItemBody,
+} from 'react-accessible-accordion';
+// Demo styles, see 'Styles' section below for some notes on use.
+import 'react-accessible-accordion/dist/fancy-example.css';
+
 
 export default (newsPosts) => {
   let index = [];
-  for (const year in newsPosts) {
+  const years = Object.keys(newsPosts).sort((a,b) => a < b);
+  index = years.map(year => {
     const posts = newsPosts[year];
-    index.push(yearlyFoldableIndex(year, posts));
-  }
+    return yearlyFoldableIndex(year, posts);
+  });
   return (
-    <ul>
+    <Accordion>
       {index}
-    </ul>
+    </Accordion>
   )
 }
 
 function yearlyFoldableIndex(year, posts) {
+  debugger;
   const yearlyPosts = posts.map((post,i) => {
     const { frontmatter: {title, date} } = post;
-    return <li key={i}><Link to={`/news#${date}`}>{title}</Link></li>
+    return <li key={i}><Link to={`/news#${date}`}>{trimYear(date)} {title}</Link></li>
   });
 
   return (
-    <li key={year}>
-      <h2>{year}</h2>
-      <ul>
-        {yearlyPosts}
-      </ul>
-    </li>
+    <AccordionItem key={year}>
+      <AccordionItemTitle>{year}</AccordionItemTitle>
+      <AccordionItemBody>
+        <ul>
+          {yearlyPosts}
+        </ul>
+      </AccordionItemBody>
+    </AccordionItem>
   );
+}
+
+function trimYear(date) {
+  return date.split('-').slice(1).join('.'); 
 }
