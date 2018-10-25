@@ -1,7 +1,18 @@
 .header {
-  background: red;
+  .mobile {
+    // background: red;
+  }
 }
 
 .footer {
   background: blue;
+}
+
+@media (min-width: 426px){
+  .header {
+    background: pink;
+    .mobile {
+      display: none;
+    }
+  }
 }
