@@ -25,7 +25,6 @@ export default (newsPosts) => {
 }
 
 function yearlyFoldableIndex(year, posts) {
-  debugger;
   const yearlyPosts = posts.map((post,i) => {
     const { frontmatter: {title, date} } = post;
     return <li key={i}><Link to={`/news#${date}`}>{trimYear(date)} {title}</Link></li>

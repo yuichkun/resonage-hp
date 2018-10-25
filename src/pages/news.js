@@ -2,15 +2,16 @@ import React from "react"
 import { graphql } from "gatsby" 
 import renderNewsIndex from "../components/renderNewsIndex"
 import renderNewsDetail from "../components/renderNewsDetail"
+import Layout from "../components/Layout";
 
 export default ({ data }) => {
   const newsPosts = groupNewsPosts(data);
   return (
-    <div>
+    <Layout>
       <h1>News</h1>
       {renderNewsIndex(newsPosts)}
       {renderNewsDetail(findCurrentNewsDetail(newsPosts))}
-    </div>
+    </Layout>
   );
 };
 
