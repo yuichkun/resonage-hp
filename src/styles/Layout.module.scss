@@ -1,6 +1,17 @@
 .header {
+  position: relative;
+  height: 32px;
+  nav {
+    position: fixed;
+  }
   .mobile {
-    // background: red;
+    background: red;
+    img {
+      height: 32px;
+    }
+    svg {
+      height: 32px;
+    }
   }
 }
 
