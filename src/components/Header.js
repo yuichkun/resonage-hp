@@ -10,8 +10,8 @@ export default () => (
   <div className={styles.header}>
    {/* Mobile */}
     <nav className={styles.mobile}>
-      <Link to ="/"><img src={Logo} /></Link>
-      <FontAwesomeIcon icon={faBars} color={variables.ResonageBlue} />
+      <Link to ="/"><img src={Logo} /><span className={styles.pcOnly}>株式会社レゾナージュ</span></Link>
+      <FontAwesomeIcon icon={faBars} color={variables.ResonageBlue} className={styles.mobileOnly} />
     </nav>
    {/* PC */}
     <nav>

@@ -1,6 +1,18 @@
 $MOBILE_HEADER_HEIGHT: 32px;
 $MOBILE_HEADER_PADDING: 12px;
 
+a {
+  text-decoration: none;
+}
+
+.pcOnly{
+  display: none;
+}
+
+.mobileOnly {
+  display: initial;
+}
+
 .header {
   width: 100vw;
   height: $MOBILE_HEADER_HEIGHT + ($MOBILE_HEADER_PADDING * 2);
@@ -28,10 +40,18 @@ $MOBILE_HEADER_PADDING: 12px;
   background: blue;
 }
 
-@media (min-width: 426px){
+@media (min-width: 769px){
+  .pcOnly {
+    display: initial;
+  }
+  .mobileOnly {
+    display: none;
+  }
   .header {
     nav {
-     background: pink;
+     span {
+       font-size: 18px;
+     }
     }
     .mobile {
       display: none;
