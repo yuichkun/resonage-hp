@@ -33,13 +33,14 @@ function groupNewsPosts(data) {
 function findCurrentNewsDetail(newsPosts) {
   let foundItem;
   const targetDate = window.location.hash.slice(1);
+  function isCurrentPost(post) {
+    const { frontmatter: { date } } = post;
+    if (date === targetDate) {
+      foundItem = post;
+    }
+  }
   for (const year in newsPosts) {
-    newsPosts[year].forEach(post => {
-      const { frontmatter: { date }, html } = post;
-      if (date === targetDate) {
-        foundItem = post;
-      }
-    });
+    newsPosts[year].forEach(isCurrentPost);
   }
   return foundItem;
 }
