@@ -1,16 +1,25 @@
+$MOBILE_HEADER_HEIGHT: 32px;
+$MOBILE_HEADER_PADDING: 12px;
+
 .header {
-  position: relative;
-  height: 32px;
+  width: 100vw;
+  height: $MOBILE_HEADER_HEIGHT + ($MOBILE_HEADER_PADDING * 2);
   nav {
     position: fixed;
+    background: #fff;
+    width: 100%;
   }
-  .mobile {
-    background: red;
+  nav.mobile {
+    display: flex;
+    justify-content: space-between;
+    padding: $MOBILE_HEADER_PADDING 0;
     img {
-      height: 32px;
+      margin-left: 24px;
+      height: $MOBILE_HEADER_HEIGHT;
     }
     svg {
-      height: 32px;
+      margin-right: 24px;
+      height: $MOBILE_HEADER_HEIGHT;
     }
   }
 }
@@ -21,7 +30,9 @@
 
 @media (min-width: 426px){
   .header {
-    background: pink;
+    nav {
+     background: pink;
+    }
     .mobile {
       display: none;
     }
