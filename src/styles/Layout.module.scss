@@ -1,5 +1,7 @@
-$MOBILE_HEADER_HEIGHT: 32px;
-$MOBILE_HEADER_PADDING: 12px;
+@import "./header.module.scss";
+@import "./footer.module.scss";
+@import "./variables.scss";
+
 
 a {
   text-decoration: none;
@@ -13,48 +15,11 @@ a {
   display: initial;
 }
 
-.header {
-  width: 100vw;
-  height: $MOBILE_HEADER_HEIGHT + ($MOBILE_HEADER_PADDING * 2);
-  nav {
-    position: fixed;
-    background: #fff;
-    width: 100%;
-  }
-  nav.mobile {
-    display: flex;
-    justify-content: space-between;
-    padding: $MOBILE_HEADER_PADDING 0;
-    img {
-      margin-left: 24px;
-      height: $MOBILE_HEADER_HEIGHT;
-    }
-    svg {
-      margin-right: 24px;
-      height: $MOBILE_HEADER_HEIGHT;
-    }
-  }
-}
-
-.footer {
-  background: blue;
-}
-
-@media (min-width: 769px){
+@media (min-width: $MEDIA_BREAK_POINT){
   .pcOnly {
     display: initial;
   }
   .mobileOnly {
     display: none;
-  }
-  .header {
-    nav {
-     span {
-       font-size: 18px;
-     }
-    }
-    .mobile {
-      display: none;
-    }
   }
 }

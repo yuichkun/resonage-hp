@@ -1,0 +1,37 @@
+@import "./variables.scss";
+
+.header {
+  width: 100vw;
+  height: $MOBILE_HEADER_HEIGHT + ($MOBILE_HEADER_PADDING * 2);
+  nav {
+    position: fixed;
+    background: #fff;
+    width: 100%;
+  }
+  nav.mobile {
+    display: flex;
+    justify-content: space-between;
+    padding: $MOBILE_HEADER_PADDING 0;
+    img {
+      margin-left: 24px;
+      height: $MOBILE_HEADER_HEIGHT;
+    }
+    svg {
+      margin-right: 24px;
+      height: $MOBILE_HEADER_HEIGHT;
+    }
+  }
+}
+
+@media (min-width: $MEDIA_BREAK_POINT){
+  .header {
+    nav {
+     span {
+      //  font-size: 18px;
+     }
+    }
+    .mobile {
+      display: none;
+    }
+  }
+}
