@@ -22,8 +22,8 @@
     "node-sass": "^4.9.4",
     "react-accessible-accordion": "^2.4.5",
     "react-typography": "^0.16.13",
-    "reset-css": "^4.0.1",
     "typography": "^0.16.17",
+    "typography-theme-bootstrap": "^0.16.7",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {}

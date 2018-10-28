@@ -6,6 +6,8 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import variables from "../styles/variables.scss"
 import Logo from "../../logo.svg"
 
+// TODO
+// Hamburgerの色がプロダクションで反映されていない
 export default () => (
   <div className={styles.header}>
    {/* Mobile */}

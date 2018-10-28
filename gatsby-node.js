@@ -1,8 +1,16 @@
-exports.modifyWebpackConfig = ({ config, stage }) => {
+exports.onCreateWebpackConfig = ({ stage, loaders, actions}) => {
   if (stage === 'build-html') {
-    config.loader('null', {
-      test: /webfontloader/,
-      loader: 'null-loader'
-    })
+    actions.setWebpackConfig(
+      {
+        module: {
+          rules: [
+            {
+              test: /webfontloader/,
+              use: loaders.null()
+            }
+          ]
+        }
+      }
+    );   
   }
 }

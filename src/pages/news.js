@@ -32,7 +32,8 @@ function groupNewsPosts(data) {
 
 function findCurrentNewsDetail(newsPosts) {
   let foundItem;
-  const targetDate = window.location.hash.slice(1);
+  const windowIsDefined = typeof window !== "undefined";
+  const targetDate = windowIsDefined ? window.location.hash.slice(1) : null;
   function isCurrentPost(post) {
     const { frontmatter: { date } } = post;
     if (date === targetDate) {
