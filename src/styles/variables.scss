@@ -2,7 +2,10 @@ $MEDIA_BREAK_POINT: 769px;
 $ResonageBlue:#0072D3;
 $MOBILE_HEADER_HEIGHT: 32px;
 $MOBILE_HEADER_PADDING: 12px;
+$PC_HEADER_HEIGHT: 48px;
+$PC_HEADER_PADDING: 20px;
 
 :export {
-  ResonageBlue: $ResonageBlue
+  ResonageBlue: $ResonageBlue;
+  MediaBreakPoint: $MEDIA_BREAK_POINT;
 }
